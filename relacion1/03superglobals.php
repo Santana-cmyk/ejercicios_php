@@ -29,7 +29,6 @@
     <ul>
         <?php 
             echo "<li><b>Document-root: </b>" . $_SERVER['DOCUMENT_ROOT'] . "</li>"; 
-            echo "<li><b>Document-root: </b>" . $_SERVER['DOCUMENT_ROOT'] . "</li>"; 
             echo "<li><b>PHP-SELF: </b>" . $_SERVER['PHP_SELF'] . "</li>";
             echo "<li><b>SERVER-NAME: </b>" . $_SERVER['SERVER_NAME'] . "</li>"; 
             echo "<li><b>SERVER-SOFTWARE: </b>" . $_SERVER['SERVER_SOFTWARE'] . "</li>"; 
