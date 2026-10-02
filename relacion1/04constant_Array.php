@@ -3,24 +3,11 @@
  Nombre: Daniel Santana Bueno
  Curso: 2ºDAW
  Ejercicio: 4 - Array constante
- Descripción: Investiga qué y cuales son las superglobals en php
-              (https://www.php.net/manual/es/language.variables.superglobals.php), y haz
-              un programa que muestre, en forma de lista no numerada, para la superglobal
-                $_SERVER los valores de:
-                ‘DOCUMENT-ROOT’
-                ‘PHP-SELF’
-                ‘SERVER-NAME’
-                'SERVER_SOFTWARE'
-                'SERVER_PROTOCOL'
-                'HTTP_HOST'
-                1
-                'HTTP_USER_AGENT'
-                'REMOTE_ADDR'
-                'REMOTE_PORT'
-                'SCRIPT_FILENAME'
-                'REQUEST_URI'
-                Prueba un volcado de $_SERVER con var_dump($_SERVER) y también con
-                print_r($_SERVER). ¿Cuál es la diferencia?
+ Descripción:  En un programa PHP, declara un array constante en el que se almacenarán
+                los días de la semana. Muestra por pantalla:
+                ● el primer dia de la semana
+                ● todos los días secuencialmente
+                ● lo mismo que el anterior, pero en formato de lista numerada
 -->
 
 <!DOCTYPE html>
