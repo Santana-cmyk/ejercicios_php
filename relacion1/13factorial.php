@@ -1,5 +1,13 @@
+<!-- Nombre: Daniel Santana Bueno
+  Curso: 2ºDAW
+  Ejercicio: 13 - Factorial
+  Descripción: Haz un script PHP que calcule el factorial de un número natural (entero y
+               positivo). Haz que se muestren los cálculos que se van haciendo
+-->
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,25 +16,27 @@
 </head>
 
 <body>
-    <h1>Calculo del factorial de un número con PHP</h1>
+    <h1>Cálculo del factorial de un número con PHP</h1>
     <h2>Daniel Santana Bueno</h2>
     <?php
+    $n = 10;
 
-    $a = 10;
+    if ($n >= 0) {
+        echo "<h3>Factorial de $n</h3>";
 
-    if ($a > 0) {
-        echo "Factorial de $a";
-        for ($i = $a -1; $i > 0; $i--) {
-            $factorial = ($a * $i);
-            echo "<p>$a * $i = $factorial<p>";
+        $factorial = 1;   // se empieza en 1 porque es el elemento neutro del producto
+
+        // Se multiplica 1 · 2 · 3 · ... · n acumulando el resultado
+        for ($i = 1; $i <= $n; $i++) {
+            $factorial = $factorial * $i;
+            echo "<p>Paso $i: resultado parcial = $factorial</p>";
         }
+
+        echo "<p><b>$n! = $factorial</b></p>";
     } else {
-        echo "<p>El numero debe ser positivo</p>";
+        echo "<p>El número no puede ser negativo.</p>";
     }
-
     ?>
-
-
 </body>
 
 </html>

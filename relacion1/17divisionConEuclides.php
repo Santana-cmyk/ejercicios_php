@@ -1,15 +1,21 @@
+<!-- Nombre: Daniel Santana Bueno
+Curso: 2ºDAW
+Ejercicio: 17 - División con el algoritmo de Euclides
+Descripción: Haz un script en PHP que calcule la división de dos números naturales
+            utilizando el algoritmo de Euclides para la división
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo de euclides</title>
+    <title>Algoritmo de Euclides</title>
 </head>
 
 <body>
-    <h1>Algoritmo de euclides</h1>
-    <h2>Realización de una división utilizando el algoritmo de euclides</h2>
+    <h1>Algoritmo de Euclides</h1>
+    <h2>División mediante restas sucesivas</h2>
     <h3>Daniel Santana Bueno</h3>
 
     <?php
@@ -19,19 +25,23 @@
     echo "<p>Dividendo: $dividendo</p>";
     echo "<p>Divisor: $divisor</p>";
 
-    if ($divisor > 0) {
+    // El divisor debe ser mayor que 0 (no se puede dividir entre 0)
+    // y el dividendo no puede ser negativo
+    if ($divisor > 0 && $dividendo >= 0) {
         $cociente = 0;
         $resto = $dividendo;
 
+        // Mientras quepa el divisor en lo que queda, se resta y se cuenta
         while ($resto >= $divisor) {
-            $resto -= $divisor;
+            $resto = $resto - $divisor;
             $cociente++;
         }
 
         echo "<p>Cociente: $cociente</p>";
         echo "<p>Resto: $resto</p>";
+        echo "<p>Comprobación: $divisor x $cociente + $resto = " . ($divisor * $cociente + $resto) . "</p>";
     } else {
-        echo "<p>El divisor debe ser mayor que cero.</p>";
+        echo "<p>El divisor debe ser mayor que cero y el dividendo no puede ser negativo.</p>";
     }
     ?>
 </body>

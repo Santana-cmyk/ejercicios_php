@@ -1,18 +1,31 @@
+<?php
+/*
+ * Nombre: Daniel Santana Bueno
+ * Curso: 2ºDAW
+ * Ejercicio: 3 - Superglobals ($_SERVER)
+ * Descripción: Muestra información del servidor y de la petición usando la
+ *              variable superglobal $_SERVER: primero una lista con los
+ *              valores más importantes y luego un volcado completo con
+ *              var_dump() y print_r().
+ */
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2: Superglobals</title> 
+    <title>Ejercicio 3: Superglobals</title>
     <style>
         b {
             color: red;
-
         }
     </style>
 </head>
+
 <body>
-    <h1><?php echo 'Valores de $_SERVER'?></h1>
+    <!-- Con comillas simples PHP no sustituye $_SERVER, lo escribe tal cual -->
+    <h1><?php echo 'Valores de $_SERVER'; ?></h1>
     <ul>
         <?php 
             echo "<li><b>Document-root: </b>" . $_SERVER['DOCUMENT_ROOT'] . "</li>"; 
@@ -30,10 +43,12 @@
         ?>
     </ul>
 
-    <!-- Volcado con var_dump --> 
-    <?php var_dump($_SERVER); ?>
-    <br><br><br>
-    <!-- Volcado con print_r() -->
-     <?php print_r($_SERVER); ?>
+    <h2>Volcado con var_dump()</h2>
+    <!-- <pre> respeta los saltos de línea y hace el volcado legible -->
+    <pre><?php var_dump($_SERVER); ?></pre>
+
+    <h2>Volcado con print_r()</h2>
+    <pre><?php print_r($_SERVER); ?></pre>
 </body>
+
 </html>

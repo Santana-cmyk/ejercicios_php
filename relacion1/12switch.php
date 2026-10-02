@@ -1,5 +1,18 @@
+<!--
+
+  Nombre: Daniel Santana Bueno
+  Curso: 2ºDAW
+  Ejercicio: 12 - Bifurcación con switch
+  Descripción: Realiza un programa php que, a partir de una nota numérica entera entre
+                1 y 10 devuelva:
+                ● Sobresaliente si es 9 ó 10
+                ● Notable si es 7 u 8
+                ● Bien si es un 6
+                ● Suficiente si es un 5
+                ● Suspenso, si es 1,2,3 ó 4
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +21,22 @@
 </head>
 
 <body>
-    <h1>Bifurcación mediante Switch</h1>
+    <h1>Bifurcación mediante switch</h1>
     <h2>Daniel Santana Bueno</h2>
 
     <?php
-    $nota =  5;
-    echo "Nota en la variable: $nota";
+    $nota = 5;   // nota entera de 0 a 10
+    echo "<p>Nota en la variable: $nota</p>";
 
     switch ($nota) {
-        case $nota >= 0 && $nota <= 4:
+        // Varios case seguidos comparten el mismo bloque de código
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
             echo "<p>Suspenso</p>";
-            break;
+            break;   // break evita que siga ejecutando los case siguientes
 
         case 5:
             echo "<p>Suficiente</p>";
@@ -26,18 +44,21 @@
 
         case 6:
             echo "<p>Bien</p>";
-
             break;
 
-        case $nota >= 7 && $nota <= 8:
+        case 7:
+        case 8:
             echo "<p>Notable</p>";
             break;
 
-        case $nota >= 9 && $nota <= 10:
+        case 9:
+        case 10:
             echo "<p>Sobresaliente</p>";
             break;
+
+        // default se ejecuta si no coincide ningún case
         default:
-            echo "Esta nota no es válida";
+            echo "<p>Esta nota no es válida</p>";
     }
     ?>
 </body>
