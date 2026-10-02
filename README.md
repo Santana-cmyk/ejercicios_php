@@ -1,4 +1,6 @@
-# 🐘 Ejercicios de PHP
+#  Ejercicios de  ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+
+
 
 Colección de ejercicios prácticos de **PHP** realizados durante el curso de **2º DAW** (Desarrollo de Aplicaciones Web). Cada script es independiente y se centra en un concepto básico del lenguaje: sintaxis, tipos de datos, arrays, estructuras de control, bucles y algoritmos matemáticos sencillos.
 
@@ -6,7 +8,7 @@ Colección de ejercicios prácticos de **PHP** realizados durante el curso de **
 
 ---
 
-## 📁 Estructura del repositorio
+##  Estructura del repositorio
 
 ```
 ejercicios_php/
@@ -26,7 +28,7 @@ Los ejercicios se organizan en **relaciones** (carpetas):
 
 ---
 
-## 📚 Índice de ejercicios — Relación 1
+##  Índice de ejercicios — Relación 1
 
 ### Fundamentos y tipos de datos
 
@@ -72,18 +74,6 @@ Los ejercicios se organizan en **relaciones** (carpetas):
 
 ---
 
-## 🛠️ Requisitos
-
-- **PHP 7.4 o superior** (recomendado PHP 8.x)
-- Un servidor web local **o** el servidor integrado de PHP
-
-Opciones de entorno:
-
-- [XAMPP](https://www.apachefriends.org/) / [WAMP](https://www.wampserver.com/) / [Laragon](https://laragon.org/)
-- PHP instalado directamente en el sistema
-
----
-
 ## ▶️ Cómo ejecutar los ejercicios
 
 ### 1. Clonar el repositorio
@@ -120,12 +110,9 @@ Algunos scripts pueden ejecutarse directamente, aunque la salida contendrá etiq
 ```bash
 php relacion1/018mcdEuclides.php
 ```
-
-> ⚠️ `03superglobals.php` usa `$_SERVER` (por ejemplo `HTTP_USER_AGENT` o `REMOTE_ADDR`), por lo que debe ejecutarse a través de un servidor web.
-
 ---
 
-## 💡 Conceptos practicados
+##  Conceptos practicados
 
 - Salida de datos: `echo`, `printf`, `var_dump`, `print_r`
 - Variables, constantes (`define`, `const`) y tipos de datos
@@ -139,13 +126,4 @@ php relacion1/018mcdEuclides.php
 
 ---
 
-## 📝 Convenciones
 
-- Cada archivo empieza con una cabecera con el nombre del autor, el curso, el número de ejercicio y el enunciado.
-- Los datos de entrada están definidos como variables dentro del propio script, de modo que basta con modificarlos para probar otros casos.
-
----
-
-## 📄 Licencia
-
-Este repositorio tiene fines **educativos**. Siéntete libre de consultarlo como referencia.
