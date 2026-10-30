@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <h1>Subir varios archivos</h1>
+    <form action="subir.php" method="POST" enctype="multipart/form-data">
+      <label for="documentos">Selecciona varios archivos:</label>
+      <input type="file" id="documentos" name="ficheros[]" multiple />
+      <button type="submit">Subir Archivos</button>
+    </form>
+  </body>
+</html>

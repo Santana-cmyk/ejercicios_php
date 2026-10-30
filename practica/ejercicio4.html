@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <h1>Publicar en el muro</h1>
+    <form action="muro.php" method="POST" enctype="multipart/form-data">
+      <p>
+        <label for="autor">Nombre:</label>
+        <input type="text" id="autor" name="autor" required />
+      </p>
+      <p>
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          cols="40"
+          required
+        ></textarea>
+      </p>
+      <p>
+        <label for="imagenes">Imágenes:</label>
+        <input
+          type="file"
+          id="imagenes"
+          name="ficheros[]"
+          accept="image/*"
+          multiple
+        />
+      </p>
+      <button type="submit">Publicar</button>
+    </form>
+    <p><a href="muro.php">Ver el muro</a></p>
+  </body>
+</html>

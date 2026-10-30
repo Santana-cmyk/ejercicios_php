@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 2</title>
+  </head>
+  <body>
+    <h1>Subir una imagen</h1>
+    <form action="subir.php" method="POST" enctype="multipart/form-data">
+      <label for="imagen">Selecciona una imagen:</label>
+      <input type="file" id="imagen" name="ficheros[]" accept="image/*" />
+      <button type="submit">Enviar imagen</button>
+    </form>
+  </body>
+</html>

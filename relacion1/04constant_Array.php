@@ -17,38 +17,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array constante de días de la semana</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <h2>Manejo de arrays constantes: días de la semana</h2>
+    <main class="container mt-4">
+        <h1>Días de la semana</h1>
+        <a href="index.html">Volver a la relación 1</a>
 
-    <?php
-    // define() crea una constante. Su valor no puede cambiar después.
-    define("DIAS_SEMANA", [
-        "Lunes",
-        "Martes",
-        "Miércoles",
-        "Jueves",
-        "Viernes",
-        "Sábado",
-        "Domingo"
-    ]);
+        <?php
+        define("DIAS_SEMANA", [
+            "Lunes", "Martes", "Miércoles", "Jueves",
+            "Viernes", "Sábado", "Domingo"
+        ]);
+        ?>
 
-    // Acceso a un elemento por su posición (empieza en 0)
-    echo "<p>El primer día de la semana es: " . DIAS_SEMANA[0] . "</p>";
+        <p class="mt-3">El primer día es: <?= DIAS_SEMANA[0] ?></p>
 
-    // Recorrido con for: count() devuelve el número de elementos
-    for ($i = 0; $i < count(DIAS_SEMANA); $i++) {
-        echo DIAS_SEMANA[$i] . "<br>";
-    }
+        <p>
+            <?php
+            foreach (DIAS_SEMANA as $dia) {
+                echo $dia . " ";
+            }
+            ?>
+        </p>
 
-    // Mismo recorrido, pero en una lista numerada (<ol>)
-    echo "<ol>";
-    for ($i = 0; $i < count(DIAS_SEMANA); $i++) {
-        echo "<li>" . DIAS_SEMANA[$i] . "</li>";
-    }
-    echo "</ol>";
-    ?>
+        <h2 class="h4">Lista numerada</h2>
+        <ol class="list-group list-group-numbered">
+            <?php foreach (DIAS_SEMANA as $dia): ?>
+                <li class="list-group-item"><?= $dia ?></li>
+            <?php endforeach; ?>
+        </ol>
+    </main>
 </body>
 
 </html>

@@ -17,7 +17,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array asociativo</title>
+    <title>Array asociativo | Temperaturas</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,41 +37,50 @@
         "Domingo"   => 55
     ];
     ?>
-    
-    <!-- Acceso directo a un elemento usando su clave -->
-    <?php echo "<p>Temperatura del Lunes: " . TEMPERATURAS["Lunes"] . "°C</p>"; ?>
 
-    <!-- foreach recorre el array: $dia es la clave y $temperatura el valor -->
-    <h3>Lista con viñetas</h3>
-    <ul>
-        <?php
-        foreach (TEMPERATURAS as $dia => $temperatura) {
-            echo "<li>Temperatura del $dia: $temperatura °C</li>";
-        }
-        ?>
-    </ul>
+    <main class="container mt-4">
+        <h1>Temperaturas de la semana</h1>
+        <a href="index.html">Volver a la relación 1</a>
 
-    <h3>Lista numerada</h3>
-    <ol>
-        <?php
-        foreach (TEMPERATURAS as $dia => $temperatura) {
-            echo "<li>Temperatura del $dia: $temperatura °C</li>";
-        }
-        ?>
-    </ol>
+        <p class="mt-3">Temperatura del lunes: <?= TEMPERATURAS["Lunes"] ?> °C</p>
 
-    <h3>Tabla</h3>
-    <table border="1">
-        <tr>
-            <th>Día</th>
-            <th>Temperatura (°C)</th>
-        </tr>
-        <?php
-        foreach (TEMPERATURAS as $dia => $temperatura) {
-            echo "<tr><td>$dia</td><td>$temperatura</td></tr>";
-        }
-        ?>
-    </table>
+        <h2 class="h4">Lista con viñetas</h2>
+        <ul class="list-group mb-3">
+            <?php foreach (TEMPERATURAS as $dia => $temperatura): ?>
+                <li class="list-group-item"><?= $dia ?>: <?= $temperatura ?> °C</li>
+            <?php endforeach; ?>
+        </ul>
+
+        <h2 class="h4">Lista numerada</h2>
+        <ol class="list-group list-group-numbered mb-3">
+            <?php foreach (TEMPERATURAS as $dia => $temperatura): ?>
+                <li class="list-group-item"><?= $dia ?>: <?= $temperatura ?> °C</li>
+            <?php endforeach; ?>
+        </ol>
+
+        <h2 class="h4">Tabla</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Día</th>
+                    <th>Temperatura (°C)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach (TEMPERATURAS as $dia => $temperatura): ?>
+                    <tr>
+                        <td><?= $dia ?></td>
+                        <td><?= $temperatura ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <h2 class="h4">Componentes de prueba</h2>
+        <button class="btn btn-primary">Botón</button>
+        <button class="btn btn-secondary">Otro botón</button>
+        <span class="spinner-border spinner-border-sm" role="status"></span>
+    </main>
 </body>
 
 </html>

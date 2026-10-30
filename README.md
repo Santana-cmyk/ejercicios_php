@@ -13,6 +13,11 @@ Los ejercicios se organizan en **relaciones** (carpetas):
 | Carpeta | Contenido | Estado |
 | :--- | :--- | :--- |
 | `relacion1/` | Fundamentos de PHP: salida por pantalla, variables, arrays, condicionales y bucles | ✅ Completada |
+| `relacion2/` | Formularios, calculadora y presentación de datos con Bootstrap 5 | ✅ En curso |
+
+El índice general está en [`superindex.html`](./superindex.html). Cada relación
+incluye su propio índice y utiliza Bootstrap 5 desde CDN para el formato del
+frontend.
 
 ## Índice de ejercicios — Relación 1
 
@@ -55,6 +60,14 @@ Los ejercicios se organizan en **relaciones** (carpetas):
 | 18 | `018mcdEuclides.php` | Máximo común divisor con el algoritmo de Euclides |
 | 19 | `019binarioaNatural.php` | Conversión de un número decimal a binario mediante divisiones sucesivas entre 2 |
 | 20 | `020conversor-bases.php` | Conversor de bases: de binario a decimal, y de decimal a hexadecimal y octal (`dechex()`, `decoct()`) |
+
+## Relación 2 — Bootstrap 5
+
+| Nº | Archivo | Descripción |
+| :---: | :--- | :--- |
+| 1 | `relacion2/1calculadora.php` | Calculadora básica con formulario Bootstrap |
+| 2 | `relacion2/formulario.html` | Formulario de referencia con componentes Bootstrap |
+| 3 | `relacion2/3personas.php` | Tabla PHP de personas con datos de contacto y formato Bootstrap |
 
 ---
 
