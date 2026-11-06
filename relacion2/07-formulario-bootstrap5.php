@@ -12,23 +12,20 @@
 
 
 <body>
-    <header>
+    <header class="navbar p-3">
         <h1>Ejercicio07</h1>
-        <h2>Monta en un documento PHP un formulario para introducir 2 números
-            formateado con el framework Bootstrap 5</h2>
         <h3>Daniel Santana Bueno</h3>
-
+        <a href="index.html">Volver a la relacion 2</a>
     </header>
 
-    <main>
-        <form>
-            <label for="numero1" class="form-label">Numero1</label>
-            <input type="number" class="form-control" id="numero1">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-            <button type="submit" class="btn btn-primary">Submit</button>
+    <main class="p-4 container">
+        <form class="container">
+            <label for="numero1" class="form-label mt-2">Numero1</label>
+            <input type="number" class="form-control form-control-sm" id="numero1">
+            <label for="numero2" class="form-label mt-2">Número 2</label>
+            <input type="number" class="form-control form-control-sm" id="numero2">
+            <button type="submit" class="btn btn-primary mt-3 ">Submit</button>
         </form>
-
     </main>
 </body>
 

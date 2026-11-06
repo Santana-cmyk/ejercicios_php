@@ -9,38 +9,48 @@
 </head>
 
 <body>
-    <?php
-    $personas = [
-        ["Ana", "García", "ana@example.com", "600123456"],
-        ["Luis", "López", "luis@example.com", "611234567"],
-        ["Marta", "Sánchez", "marta@example.com", "622345678"],
-    ];
-    ?>
 
     <main class="container mt-4">
         <h1>Listado de personas</h1>
         <a href="index.html">Volver a la relación 2</a>
 
-        <table class="table table-striped table-bordered mt-3">
-            <thead class="table-success">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                </tr>
+        <?php
+        $personas = [
+            [1, "Franklin", "Horwell", "fhorwell0@sina.com.cn", 3442019428],
+            [2, "Barnard", "Conor", "bconor1@kickstarter.com", 6257201959],
+            [3, "Hurley", "Pauleit", "hpauleit2@dagondesign.com", 2151759418],
+            [4, "Alfy", "Negus", "anegus3@dedecms.com", 4261803754],
+            [5, "Peirce", "Slowey", "pslowey4@washingtonpost.com", 2331867778]
+        ]
+        ?>
+
+
+        <table class="table table-bodered mt-5">
+            <thead class="text-center">
+                <th>Listado de Personas</th>
             </thead>
             <tbody>
                 <tr>
-                    <?php foreach ($personas as $persona): ?>
-                <tr>
-                    <td><?= $persona[0] ?></td>
-                    <td><?= $persona[1] ?></td>
-                    <td><?= $persona[2] ?></td>
-                    <td><?= $persona[3] ?></td>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                    <td>Correo</td>
+                    <td>Tlf</td>
                 </tr>
-            <?php endforeach; ?>
-            </tr>
+
+
+                <?php
+                foreach ($personas as $persona):
+                ?>
+                    <tr>
+                        <td><?php echo $persona[0] ?></td>
+                        <td><?php echo $persona[1] ?></td>
+                        <td><?php echo $persona[2] ?></td>
+                        <td><?php echo $persona[3] ?></td>
+                        <td><?php echo $persona[4] ?></td>
+                    </tr>
+
+                <?php endforeach; ?>
             </tbody>
         </table>
     </main>
