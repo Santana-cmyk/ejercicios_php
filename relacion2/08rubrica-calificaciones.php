@@ -34,15 +34,37 @@
     $notaFinal = 0;
     ?>
 
-    <main class="container">
+    <main class="container ">
         <div class="card">
-            <?php
-            foreach ($rubrica as $evaluacion => $peso) {
-                $nota = $notasAna[$evaluacion];
-                $notaFinal += $nota * $peso; // nota multiplicada por su peso
-                echo "<p>Evaluación $evaluacion: nota $nota (peso " . ($peso * 100) . " %)</p>";
-            }
-            ?>
+            <div class="card-body">
+                <h4 class="card-title">Calificaciones</h4>
+                <p class="card-text">Notas de Ana</p>
+                <?php
+                foreach ($rubrica as $evaluacion => $peso) {
+                    $nota = $notasAna[$evaluacion];
+                    $notaFinal += $nota * $peso; // nota multiplicada por su peso
+                    echo "<p>Evaluación $evaluacion: nota $nota (peso " . ($peso * 100) . " %)</p>";
+                }
+
+                echo "<p>La nota final de Ana es: $notaFinal</p>";
+
+
+                if ($notaFinal >= 5) {
+                    echo '<div class="alert alert-success">
+                            ¡Ana ha aprobado!
+                         </div>';
+                } else {
+                    echo '<div class="alert alert-danger">
+                            Ana ha suspendido
+                         </div>';
+                }
+                ?>
+            </div>
+        </div>
+
+
+        <div class="card">
+
         </div>
     </main>
 

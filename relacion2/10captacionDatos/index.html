@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rúbrica de calificaciones</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-3">
+    <header class="navbar">
+      <h1 class="navbar-brand">Rúbrica de calificaciones</h1>
+      <h2 class="h5">Daniel Santana Bueno</h2>
+      <a class="nav-link" href="../index.html">Volver a la relación 2</a>
+    </header>
+
+    <main class="container">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Introduce las calificaciones</h3>
+          <form action="calcular.php" method="post">
+            <div class="mb-3">
+              <label for="inicial" class="form-label">Evaluación inicial (10 %)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="inicial"
+                name="inicial"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="primera" class="form-label">Primera evaluación (20 %)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="primera"
+                name="primera"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="segunda" class="form-label">Segunda evaluación (30 %)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="segunda"
+                name="segunda"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="tercera" class="form-label">Tercera evaluación (40 %)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="tercera"
+                name="tercera"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular nota</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
